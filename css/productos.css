@@ -1,0 +1,163 @@
+/* Base styles */
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust for desktops (optional) */
+  grid-gap: 20px;
+  padding: 20px;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(6,1fr);
+  width: 266px; /* Adjust for desktops (optional) */
+  height: 200px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+}
+
+.caj_img {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.caj_img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+}
+.title {
+  font-size: 1.2rem;
+  text-align: center;
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.desc_item {
+  font-size: 0.9rem;
+  color: #666666e0;
+  margin-bottom: 10px;
+  display: block;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.precio {
+  font-size: 1.1rem;
+  color: #333;
+  grid-column-start: 5;
+  grid-row-start: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoria {
+  font-size: 0.9rem;
+  grid-column-start: 1;
+  grid-row-start: 6;
+  display: flex;
+  align-items: center;
+}
+
+/* Tablet Styles (optional) */
+@media only screen and (min-width: 768px) {
+  /* Adjust grid-template-columns for tablets (e.g., 2 items per row) */
+  .main {
+    grid-template-columns: repeat(2, 1fr); /* Example for 2 items per row */
+  }
+}
+
+/* Desktop Styles (optional) */
+@media only screen and (min-width: 992px) {
+  /* Adjust grid-template-columns for desktops (e.g., 3 items per row) */
+  .main {
+    grid-template-columns: repeat(3, 1fr); /* Example for 3 items per row */
+  }
+
+  /* You might want to adjust item width and other styles for desktops */
+  .item {
+    width: 300px; /* Example for wider items on desktops */
+  }
+}
+
+/* Phone Styles (375px) */
+@media only screen and (max-width: 448px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr); /* 1 item per row */
+  }
+
+  .item {
+    width: 100%; /* Full width on phones */
+    height: 65rem;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    
+  }
+  .caj_img{
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .caj_img img{
+    width: 35rem;
+    height: 35rem;
+  }
+  .title{
+    grid-row-start: 8;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    text-align: start;
+    font-size: 3rem;
+  }
+.desc_item{
+  grid-row-start: 9;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  grid-row-end:10;
+  font-size: 2.4rem;
+}
+.precio{
+  grid-row-start: 10;
+  grid-column-start: 9;
+  grid-column-end: 11;
+  display: flex;
+  text-align: end;
+  align-items: center;  
+  font-size: 2.5rem;
+}
+.crt{
+  grid-column-start: 11;
+  font-size: 2rem;
+}
+.categoria{
+  grid-column-start: 1;
+  grid-row-start: 10;
+  grid-column-end: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+}
